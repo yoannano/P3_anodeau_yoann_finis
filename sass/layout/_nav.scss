@@ -1,0 +1,19 @@
+
+//******************MENU NAV DE LA PAGE INDEX*******************
+#nav {
+    @include nav;
+ }
+
+ //***************************** LA PALETTE DU GOUT*****************************************
+
+#nav {
+    @include nav;
+}
+#nav a{
+   @include animateFleche;
+}
+.image {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+}

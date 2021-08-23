@@ -1,0 +1,336 @@
+@mixin nav {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+  height: 50px;
+  align-items: center;
+  h1 {
+    font-family: "Shrikhand";
+    font-size: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    color: rgb(0, 0, 0);
+  }
+}
+@mixin location {
+  display: flex;
+  width: 100%;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  background-color: $color-white;
+  i {
+    margin-right: 20px;
+  }
+  h2 {
+    font-family: "Shrikhand";
+    font-weight: 100px;
+    margin: 0;
+  }
+}
+@mixin button {
+  padding: 10px;
+  border-radius: 30px;
+  color: white;
+  background-color: $color-primary;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  font-weight: 500;
+  text-decoration: none;
+  transition: 0.3s;
+  &:hover {
+    opacity: 0.8;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+  }
+}
+@mixin container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+@mixin containerBloc {
+  display: flex;
+  width: 100%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background-color: $color-gray;
+}
+@mixin coeur {
+  color: $color-primary;
+  margin-right: 5%;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  input[type="checkbox"] {
+    appearance: none;
+    margin: 0;
+  }
+  input[type="checkbox"]:checked ~ .fas {
+    background-color: $color-primary;
+    color: $color-primary;
+    -webkit-background-clip: text;
+    font-weight: 900;
+    -webkit-animation-duration: 0.5s;
+    animation-duration: 0.5s;
+    animation-name: slideHeart;
+  }
+  @media (hover: hover) {
+    input[type="checkbox"]:hover ~ .fas {
+      background: -webkit-linear-gradient(
+        var(--color-primaire),
+        var(--color-secondaire)
+      );
+      font-weight: 900;
+      -webkit-animation-duration: 0.5s;
+      animation-duration: 0.5s;
+      animation-name: slideHeart;
+    }
+  }
+  .fas {
+    font-size: 30px;
+    font-weight: 100;
+    color: $color-primary;
+  }
+}
+@keyframes coeur {
+  from {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes coeur {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@mixin fonctionnement {
+  background-color: $color-white;
+  h2 {
+    font-size: 20px;
+    text-align: start;
+    margin-left: 20px;
+  }
+
+  .fonctionality--block {
+    background-color: $color-gray;
+    display: flex;
+    width: 90%;
+    align-items: center;
+    margin: 40px 0;
+    border-radius: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: 0.5s;
+    &:hover {
+      box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+      background: lighten($color: $color-secondary, $amount: 20);
+      & a i {
+        color: darken($color: $color-primary, $amount: 20);
+      }
+    }
+    a {
+      text-decoration: none;
+      color: black;
+    }
+    // icon rond au fonctionnement
+    .fonctionality--block--icon {
+      background-color: #9356dc;
+      border-radius: 30px;
+      width: 20px;
+      height: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      margin-left: -10px;
+      span {
+        color: $color-white;
+        font-size: 10px;
+        font-weight: 500;
+      }
+    }
+    .fonctionality--block--description {
+      display: flex;
+      align-items: center;
+      padding: 15px 0;
+      flex: 1;
+      width: 90%;
+      h2 {
+        font-size: 15px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+    }
+    //icon menu fonctionnement
+    .fonctionality--block--description i {
+      margin: 0 50px;
+      font-size: 20px;
+      color: rgba(0, 0, 0, 0.3);
+    }
+  }
+}
+@mixin restaurants {
+  display: grid;
+  row-gap: 20px;
+  margin: 20px 0;
+  a {
+    text-decoration: none;
+    color: black;
+    &:hover {
+      color: var(--color-primaire);
+    }
+    & p:hover {
+      color: var(--color-primaire);
+    }
+  }
+  h2 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    text-align: start;
+    margin-left: 5%;
+  }
+  // **************************BLOC IMAGE+ NOM*****************************
+  .list-restaurant--block {
+    position: relative;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: $color-white;
+    border-radius: 15px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    &:hover {
+      box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+    }
+    .new {
+      position: absolute;
+      right: 0;
+      background-color: $color-tertiary;
+      margin: 20px;
+      padding: 10px 10px;
+      border-radius: 5px;
+      span {
+        font-weight: 900;
+        opacity: 0.3;
+      }
+    }
+    .image {
+      height: 200px;
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 15px 15px 0 0;
+        object-fit: cover;
+        cursor: pointer;
+      }
+    }
+    .description {
+      padding: 0 15px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      div:nth-child(1) {
+        text-align: start;
+        flex: 1;
+        width: 0px;
+        min-width: 0;
+        h3 {
+          margin-bottom: -10px;
+        }
+      }
+    }
+  }
+}
+@mixin footers {
+  .container bg-black {
+    .block {
+      align-items: flex-start;
+      margin-left: 20px;
+    }
+  }
+  h2 {
+    text-align: start;
+    color: white;
+    font-weight: 500;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    margin-top: auto;
+  }
+  .link {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    margin-bottom: 10px;
+    a {
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+      font-size: 1rem;
+      margin: 3px 0;
+      margin-left: 10px;
+      i {
+        width: 30px;
+      }
+    }
+  }
+}
+//********************************* LA PALETTE DU GOUT***************************************
+@mixin containerBlocPalette {
+  width: 100%;
+  border-radius: 30px 30% 0 0;
+}
+@mixin fonctionnementPalette {
+  margin-top: -20px;
+  background-color: $color-gray;
+  width: 100%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 30px 30px 0 0;
+
+  h1 {
+    font-family: "Shrikhand";
+    font-size: 20px;
+    text-align: start;
+    margin-left: 10px;
+  }
+}
+
+@mixin animateFleche {
+  position: absolute;
+  margin: 0;
+  left: 20px;
+  font-size: 20px;
+  color: #000;
+  animation: apparition 1s ease-in-out;
+}
+@keyframes apparition {
+  from {
+    opacity: 0;
+    transform: translate(400px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(20px);
+  }
+}

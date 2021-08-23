@@ -1,0 +1,42 @@
+// *****************************POUR CHANGER QUE LE BOUTON DE LA PAGE INDEX****************
+.button-index {
+  @include button;
+}
+.button-container {
+  margin-top: 50px;
+  margin-bottom: 40px;
+}
+
+// *****************************POUR CHANGER QUE LE BOUTON LA PALETTE DU GOUT****************
+.button-container-palette {
+  margin-top: 60px;
+  height: 40px;
+  text-align: center;
+}
+.button-palette {
+  @include button;
+}
+
+// *****************************POUR CHANGER QUE LE BOUTON A LA FRANCAISE****************
+.button-container-française {
+  @extend .button-container-palette;
+}
+.button-française {
+  @include button;
+}
+
+// *****************************POUR CHANGER QUE LE BOUTON DELICE DES SENS****************
+.button-container-delice {
+  @extend .button-container-palette;
+}
+.button-delice {
+  @include button;
+}
+
+// *****************************POUR CHANGER QUE LE BOUTON LA NOTE ENCHANTEE****************
+.button-container-note {
+  @extend .button-container-palette;
+}
+.button-note {
+  @include button;
+}

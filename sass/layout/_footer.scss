@@ -1,0 +1,10 @@
+
+// footer
+.block{
+    background-color: $color-footer;
+    margin-top: auto;
+    height: 140px;
+}
+footer {
+  @include footers;
+}

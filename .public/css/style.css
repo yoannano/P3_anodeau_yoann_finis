@@ -1,0 +1,714 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Shrikhand&display=swap");
+@keyframes coeur {
+  from {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes coeur {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes apparition {
+  from {
+    opacity: 0;
+    transform: translate(400px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(20px);
+  }
+}
+.button-index {
+  padding: 10px;
+  border-radius: 30px;
+  color: white;
+  background-color: #9356DC;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  font-weight: 500;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.button-index:hover {
+  opacity: 0.8;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.button-container {
+  margin-top: 50px;
+  margin-bottom: 40px;
+}
+
+.button-container-palette, .button-container-note, .button-container-delice, .button-container-française {
+  margin-top: 60px;
+  height: 40px;
+  text-align: center;
+}
+
+.button-palette {
+  padding: 10px;
+  border-radius: 30px;
+  color: white;
+  background-color: #9356DC;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  font-weight: 500;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.button-palette:hover {
+  opacity: 0.8;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.button-française {
+  padding: 10px;
+  border-radius: 30px;
+  color: white;
+  background-color: #9356DC;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  font-weight: 500;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.button-française:hover {
+  opacity: 0.8;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.button-delice {
+  padding: 10px;
+  border-radius: 30px;
+  color: white;
+  background-color: #9356DC;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  font-weight: 500;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.button-delice:hover {
+  opacity: 0.8;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.button-note {
+  padding: 10px;
+  border-radius: 30px;
+  color: white;
+  background-color: #9356DC;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  font-weight: 500;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.button-note:hover {
+  opacity: 0.8;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+#nav {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+  height: 50px;
+  align-items: center;
+}
+#nav h1 {
+  font-family: "Shrikhand";
+  font-size: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  color: black;
+}
+
+#nav {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+  height: 50px;
+  align-items: center;
+}
+#nav h1 {
+  font-family: "Shrikhand";
+  font-size: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  color: black;
+}
+
+#nav a {
+  position: absolute;
+  margin: 0;
+  left: 20px;
+  font-size: 20px;
+  color: #000;
+  animation: apparition 1s ease-in-out;
+}
+
+.image {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.containers {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.location {
+  display: flex;
+  width: 100%;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+}
+.location i {
+  margin-right: 20px;
+}
+.location h2 {
+  font-family: "Shrikhand";
+  font-weight: 100px;
+  margin: 0;
+}
+
+.container--block {
+  display: flex;
+  width: 100%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background-color: #e7e4e4;
+}
+.container--block .exploreRestaurant h2 {
+  font-size: 20px;
+}
+.container--block .fonctionality {
+  background-color: #fff;
+}
+.container--block .fonctionality h2 {
+  font-size: 20px;
+  text-align: start;
+  margin-left: 20px;
+}
+.container--block .fonctionality .fonctionality--block {
+  background-color: #e7e4e4;
+  display: flex;
+  width: 90%;
+  align-items: center;
+  margin: 40px 0;
+  border-radius: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: 0.5s;
+}
+.container--block .fonctionality .fonctionality--block:hover {
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+  background: #ffdff6;
+}
+.container--block .fonctionality .fonctionality--block:hover a i {
+  color: #6023a9;
+}
+.container--block .fonctionality .fonctionality--block a {
+  text-decoration: none;
+  color: black;
+}
+.container--block .fonctionality .fonctionality--block .fonctionality--block--icon {
+  background-color: #9356dc;
+  border-radius: 30px;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  margin-left: -10px;
+}
+.container--block .fonctionality .fonctionality--block .fonctionality--block--icon span {
+  color: #fff;
+  font-size: 10px;
+  font-weight: 500;
+}
+.container--block .fonctionality .fonctionality--block .fonctionality--block--description {
+  display: flex;
+  align-items: center;
+  padding: 15px 0;
+  flex: 1;
+  width: 90%;
+}
+.container--block .fonctionality .fonctionality--block .fonctionality--block--description h2 {
+  font-size: 15px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.container--block .fonctionality .fonctionality--block .fonctionality--block--description i {
+  margin: 0 50px;
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.3);
+}
+.container--block .list-restaurant {
+  display: grid;
+  row-gap: 20px;
+  margin: 20px 0;
+}
+.container--block .list-restaurant a {
+  text-decoration: none;
+  color: black;
+}
+.container--block .list-restaurant a:hover {
+  color: var(--color-primaire);
+}
+.container--block .list-restaurant a p:hover {
+  color: var(--color-primaire);
+}
+.container--block .list-restaurant h2 {
+  margin-top: 0;
+  font-size: 1.5rem;
+  text-align: start;
+  margin-left: 5%;
+}
+.container--block .list-restaurant .list-restaurant--block {
+  position: relative;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+.container--block .list-restaurant .list-restaurant--block:hover {
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+}
+.container--block .list-restaurant .list-restaurant--block .new {
+  position: absolute;
+  right: 0;
+  background-color: #99E2D0;
+  margin: 20px;
+  padding: 10px 10px;
+  border-radius: 5px;
+}
+.container--block .list-restaurant .list-restaurant--block .new span {
+  font-weight: 900;
+  opacity: 0.3;
+}
+.container--block .list-restaurant .list-restaurant--block .image {
+  height: 200px;
+}
+.container--block .list-restaurant .list-restaurant--block .image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px 15px 0 0;
+  object-fit: cover;
+  cursor: pointer;
+}
+.container--block .list-restaurant .list-restaurant--block .description {
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.container--block .list-restaurant .list-restaurant--block .description div:nth-child(1) {
+  text-align: start;
+  flex: 1;
+  width: 0px;
+  min-width: 0;
+}
+.container--block .list-restaurant .list-restaurant--block .description div:nth-child(1) h3 {
+  margin-bottom: -10px;
+}
+
+#fonctionalityPalette {
+  margin-top: -20px;
+  background-color: #e7e4e4;
+  width: 100%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 30px 30px 0 0;
+}
+#fonctionalityPalette h1 {
+  font-family: "Shrikhand";
+  font-size: 20px;
+  text-align: start;
+  margin-left: 10px;
+}
+#fonctionalityPalette span {
+  padding-top: 10px;
+}
+
+.title {
+  display: flex;
+  padding: 20px 10px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#entreess {
+  margin-left: 10px;
+}
+
+.entree {
+  position: relative;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.entree::after {
+  content: "";
+  width: 0%;
+  height: 5px;
+  background-color: #99E2D0;
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  border-radius: 10px;
+  transition: all 500ms ease;
+}
+
+.entree:hover::after {
+  left: 0%;
+  width: 100%;
+}
+
+.coeur-check {
+  color: #9356DC;
+  margin-right: 5%;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.coeur-check input[type=checkbox] {
+  appearance: none;
+  margin: 0;
+}
+.coeur-check input[type=checkbox]:checked ~ .fas {
+  background-color: #9356DC;
+  color: #9356DC;
+  -webkit-background-clip: text;
+  font-weight: 900;
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+  animation-name: slideHeart;
+}
+@media (hover: hover) {
+  .coeur-check input[type=checkbox]:hover ~ .fas {
+    background: -webkit-linear-gradient(var(--color-primaire), var(--color-secondaire));
+    font-weight: 900;
+    -webkit-animation-duration: 0.5s;
+    animation-duration: 0.5s;
+    animation-name: slideHeart;
+  }
+}
+.coeur-check .fas {
+  font-size: 30px;
+  font-weight: 100;
+  color: #9356DC;
+}
+
+.menu-fad-in-top {
+  border-radius: 30px 30px 0 0;
+  margin-top: -20px;
+}
+
+.menu {
+  margin-left: auto;
+  margin-right: auto;
+  width: 95%;
+}
+
+.menu--block {
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  display: -webkit-box;
+  margin: 1rem 0;
+  border-radius: 15px;
+  background-color: #99E2D0;
+}
+
+@media (hover: hover) {
+  .menu--bloc:hover {
+    -webkit-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+  }
+}
+.menu--block .description {
+  background-color: #fff;
+  height: auto;
+  width: 95%;
+  padding-left: 20px;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+}
+
+.menu--block .description h3 {
+  margin: 0;
+  margin-right: auto;
+  animation: apparition 2s ease-in-out;
+}
+
+@keyframes apparition {
+  from {
+    opacity: 0;
+    transform: translate(1350px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0px);
+  }
+}
+.menu--block .description div {
+  display: flex;
+  justify-content: space-between;
+  animation: apparition 3s ease-in-out;
+}
+
+@keyframes apparition {
+  from {
+    opacity: 0;
+    transform: translate(1350px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0px);
+  }
+}
+.menu--block .description div span {
+  margin: 0;
+  margin-top: 0.5rem;
+}
+
+.menu--block .check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  transition-duration: 0.5s;
+  margin-left: -60px;
+}
+
+.menu--block .check i {
+  visibility: hidden;
+  font-size: 1.5rem;
+  color: #fff;
+  transition: transform 0.5s ease-in-out;
+}
+
+.menu--block input[type=checkbox] {
+  width: 90%;
+  height: 20%;
+  position: absolute;
+  appearance: none;
+  margin: 0px;
+  cursor: pointer;
+}
+
+@media (hover: hover) {
+  .menu--block input[type=checkbox]:hover ~ .check {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 10%;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    margin-left: 0;
+  }
+
+  .menu--block input[type=checkbox]:hover ~ .check i {
+    visibility: visible;
+    font-size: 1.5rem;
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+.menu--block .description {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.block {
+  background-color: rgba(0, 0, 0, 0.774);
+  margin-top: auto;
+  height: 140px;
+}
+
+footer .container bg-black .block {
+  align-items: flex-start;
+  margin-left: 20px;
+}
+footer h2 {
+  text-align: start;
+  color: white;
+  font-weight: 500;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  margin-top: auto;
+}
+footer .link {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  margin-bottom: 10px;
+}
+footer .link a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  font-size: 1rem;
+  margin: 3px 0;
+  margin-left: 10px;
+}
+footer .link a i {
+  width: 30px;
+}
+
+body {
+  padding: 0 auto;
+  margin: 0 auto;
+}
+
+h3 {
+  text-overflow: ellipsis;
+}
+
+span {
+  text-overflow: ellipsis;
+}
+
+.coeur-check {
+  color: #9356DC;
+  margin-right: 5%;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.coeur-check input[type=checkbox] {
+  appearance: none;
+  margin: 0;
+}
+.coeur-check input[type=checkbox]:checked ~ .fas {
+  background-color: #9356DC;
+  color: #9356DC;
+  -webkit-background-clip: text;
+  font-weight: 900;
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+  animation-name: slideHeart;
+}
+@media (hover: hover) {
+  .coeur-check input[type=checkbox]:hover ~ .fas {
+    background: -webkit-linear-gradient(var(--color-primaire), var(--color-secondaire));
+    font-weight: 900;
+    -webkit-animation-duration: 0.5s;
+    animation-duration: 0.5s;
+    animation-name: slideHeart;
+  }
+}
+.coeur-check .fas {
+  font-size: 30px;
+  font-weight: 100;
+  color: #9356DC;
+}
+
+@media only screen and (min-width: 768px) {
+  .container--block {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height: auto;
+  }
+
+  .block {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #entreess {
+    height: 930px;
+  }
+
+  .fonctionalityPalette {
+    height: 990px;
+  }
+
+  .entrees {
+    text-align: center;
+    width: 45%;
+    height: 400px;
+  }
+
+  .entrees:nth-child(2) {
+    float: right;
+    width: 45%;
+    margin-top: -400px;
+  }
+
+  .entrees:nth-child(3) {
+    margin-top: 20px;
+    width: 45%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .menu--block input[type=checkbox] {
+    width: 45%;
+  }
+
+  .block {
+    width: 100%;
+  }
+
+  .entrees:nth-child(3) {
+    margin-top: 80px;
+  }
+
+  .fonctionality--block--note {
+    margin-top: 0px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

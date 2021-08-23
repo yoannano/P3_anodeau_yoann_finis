@@ -1,0 +1,87 @@
+@import "./utils/variables";
+@import "./utils/mixins";
+
+@import "./components/buttons";
+
+@import "./layout/header";
+@import "./layout/nav";
+@import "./layout/container";
+@import "./layout/footer";
+
+@import "./libs/responsive";
+
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Shrikhand&display=swap");
+
+// ************POUR CHANGER LE BOUTON DE L INDEX VOIR COMPONENTS/BUTTONS**************************
+// ************POUR CHANGER LE BOUTON DE LA PALETTE DE GOUT VOIR COMPONENTS/BUTTONS**************************
+// ************POUR CHANGER LE BOUTON DE A LA FRANCAISE VOIR COMPONENTS/BUTTONS**************************
+// ************POUR CHANGER LE BOUTON DE LA NOTE ENCHANTEE VOIR COMPONENTS/BUTTONS**************************
+// ************POUR CHANGER LE BOUTON DELICE DES SENS VOIR COMPONENTS/BUTTONS**************************
+//*****************MENU NAV VOIR LAYOUT/NAV*******************
+// ********container Paris belleville et icone voir LAYOUT/CONTAINER**********
+body {
+  padding: 0 auto;
+  margin: 0 auto;
+}
+h3 {
+  text-overflow: ellipsis;
+}
+span {
+  text-overflow: ellipsis;
+}
+// Animation coeur
+.coeur-check {
+  @include coeur;
+}
+
+@media #{$medium-up} {
+  .container--block {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height: auto;
+  }
+  .block {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #entreess {
+    height: 930px;
+  }
+  .fonctionalityPalette {
+    height: 990px;
+  }
+  .entrees {
+    text-align: center;
+    width: 45%;
+    height: 400px;
+  }
+  .entrees:nth-child(2) {
+    float: right;
+    width: 45%;
+    margin-top: -400px;
+  }
+  .entrees:nth-child(3) {
+    margin-top: 20px;
+    width: 45%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .menu--block input[type="checkbox"] {
+    width: 45%;
+  }
+  .block {
+    width: 100%;
+  }
+  .entrees:nth-child(3) {
+    margin-top: 80px;
+  }
+  //*****************DECALAGE DES DESSERT VERS LE BAS LA NOTE ENCHANTEE A CAUSE 4 BLOC ENTREE**************
+  .fonctionality--block--note {
+    margin-top: 0px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

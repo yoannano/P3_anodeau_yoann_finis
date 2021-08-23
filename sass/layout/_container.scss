@@ -1,0 +1,192 @@
+// **************CONTAINER INDEX PARIS BELLEVILLE ET ICONE********
+.containers {
+  @include container;
+}
+.location {
+  @include location;
+}
+.container--block {
+  @include containerBloc;
+
+  .exploreRestaurant {
+    h2 {
+      font-size: 20px;
+    }
+  }
+  // container fonctionnement
+  .fonctionality {
+    @include fonctionnement;
+  }
+  // container restaurant
+  .list-restaurant {
+    @include restaurants;
+  }
+}
+// ********************bloc palette du gout***********************
+//***********************TOUTE LA PAGE MENU*************************
+
+#fonctionalityPalette {
+  @include fonctionnementPalette;
+
+  span {
+    padding-top: 10px;
+  }
+}
+// ***********************************BLOC LA PALETTE DU GOUT + COEUR*************************************
+.title {
+  display: flex;
+  padding: 20px 10px;
+  align-items: center;
+  justify-content: space-between;
+}
+//***********************************BLOC SPAN ENTREE************************************
+#entreess {
+  margin-left: 10px;
+}
+.entree {
+  position: relative;
+  cursor: pointer;
+  padding: 10px;
+}
+.entree::after {
+  content: "";
+  width: 0%;
+  height: 5px;
+  background-color: $color-tertiary;
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  border-radius: 10px;
+  transition: all 500ms ease;
+}
+.entree:hover::after {
+  left: 0%;
+  width: 100%;
+}
+.coeur-check {
+  @include coeur;
+}
+//********************BLOC PRINCIPAL MENU + CROIX VERTE********************
+.menu-fad-in-top {
+  border-radius: 30px 30px 0 0;
+  margin-top: -20px;
+}
+//**************************BLOC SECONDAIRE MENU + CROIX VERTE**********************
+.menu {
+  margin-left: auto;
+  margin-right: auto;
+  width: 95%;
+}
+.menu--block {
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  display: -webkit-box;
+  margin: 1rem 0;
+  border-radius: 15px;
+  background-color: $color-tertiary;
+}
+@media (hover: hover) {
+  .menu--bloc:hover {
+    -webkit-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+  }
+}
+.menu--block .description {
+  background-color: $color-white;
+  height: auto;
+  width: 95%;
+  padding-left: 20px;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+}
+
+.menu--block .description h3 {
+  margin: 0;
+  margin-right: auto;
+  animation: apparition 2s ease-in-out;
+}
+@keyframes apparition {
+  from {
+    opacity: 0;
+    transform: translate(1350px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0px);
+  }
+}
+//*************************AJUSTEMENT SPAN MENU*********************
+.menu--block .description div {
+  display: flex;
+  justify-content: space-between;
+  animation: apparition 3s ease-in-out;
+}
+@keyframes apparition {
+  from {
+    opacity: 0;
+    transform: translate(1350px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0px);
+  }
+}
+
+.menu--block .description div span {
+  margin: 0;
+  margin-top: 0.5rem;
+}
+
+//**************************BLOC CROIX VERTE**************************
+.menu--block .check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  transition-duration: 0.5s;
+  margin-left: -60px;
+}
+//****************************TRANSFORMATION CROIX VERTE************************
+.menu--block .check i {
+  visibility: hidden;
+  font-size: 1.5rem;
+  color: $color-white;
+  transition: transform 0.5s ease-in-out;
+}
+
+.menu--block input[type="checkbox"] {
+  width: 90%;
+  height: 20%;
+  position: absolute;
+  appearance: none;
+  margin: 0px;
+  cursor: pointer;
+}
+@media (hover: hover) {
+  .menu--block input[type="checkbox"]:hover ~ .check {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 10%;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    margin-left: 0;
+  }
+  .menu--block input[type="checkbox"]:hover ~ .check i {
+    visibility: visible;
+    font-size: 1.5rem;
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.menu--block .description {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
