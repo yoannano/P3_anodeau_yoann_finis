@@ -419,7 +419,7 @@
 .coeur-check input[type=checkbox]:checked ~ .fas {
   background-color: #9356DC;
   color: #9356DC;
-  -webkit-background-clip: text;
+  /* -webkit-background-clip: text; */
   font-weight: 900;
   -webkit-animation-duration: 0.5s;
   animation-duration: 0.5s;
@@ -630,7 +630,7 @@ span {
 .coeur-check input[type=checkbox]:checked ~ .fas {
   background-color: #9356DC;
   color: #9356DC;
-  -webkit-background-clip: text;
+  /* -webkit-background-clip: text; */
   font-weight: 900;
   -webkit-animation-duration: 0.5s;
   animation-duration: 0.5s;
