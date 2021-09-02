@@ -34,7 +34,6 @@ span {
 .coeur-check {
   @include coeur;
 }
-
 @media #{$medium-up} {
   .container--block {
     margin-left: auto;
