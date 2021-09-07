@@ -27,7 +27,7 @@
 .loader{
   position: absolute;
   width: 100%;
-  height: 50%;
+  height: 100%;
   background-color: #000;
   display: flex;
   justify-content: center;
@@ -36,10 +36,10 @@
   position: fixed;
   animation-fill-mode:forwards;
   -webkit-animation-fill-mode:forwards;
-  animation: aze 1.2s;
-  -webkit-animation: aze 1.2s;
+  animation: load 3.2s forwards;
+  -webkit-animation: load 3.2s forwards;
 }
-@keyframes aze {
+@keyframes load {
   from { opacity: 1;}
 
 to{
@@ -69,6 +69,7 @@ to{
   100% {
     color: #fff900;
     text-shadow: 0 0 7px #fff900;
+    opacity: 0;
   }
 }
 
