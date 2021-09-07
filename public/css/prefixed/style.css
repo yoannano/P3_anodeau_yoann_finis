@@ -361,8 +361,6 @@
   align-items: center;
   z-index: 1;
   position: fixed;
-  animation-fill-mode: forwards;
-  -webkit-animation-fill-mode: forwards;
   animation: load 3.2s forwards;
   -webkit-animation: load 3.2s forwards;
 }
@@ -382,8 +380,6 @@
   margin-bottom: 150px;
   animation: flash 3.2s;
   -webkit-animation: flash 3.2s;
-  animation-fill-mode: forwards;
-  -webkit-animation-fill-mode: forwards;
 }
 
 @keyframes flash {
