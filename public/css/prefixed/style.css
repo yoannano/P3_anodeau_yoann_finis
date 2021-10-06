@@ -19,6 +19,13 @@
     opacity: 1;
   }
 }
+h1 {
+  font-family: "Shrikhand";
+  font-size: 20px;
+  text-align: start;
+  margin-left: 10px;
+}
+
 @keyframes apparition {
   from {
     opacity: 0;
@@ -42,7 +49,7 @@
   transition: 0.3s;
 }
 .button-index:hover {
-  opacity: 0.8;
+  opacity: 0.7;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
 }
 
@@ -70,7 +77,7 @@
   transition: 0.3s;
 }
 .button-palette:hover {
-  opacity: 0.8;
+  opacity: 0.7;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
 }
 
@@ -87,7 +94,7 @@
   transition: 0.3s;
 }
 .button-française:hover {
-  opacity: 0.8;
+  opacity: 0.7;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
 }
 
@@ -104,7 +111,7 @@
   transition: 0.3s;
 }
 .button-delice:hover {
-  opacity: 0.8;
+  opacity: 0.7;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
 }
 
@@ -121,7 +128,7 @@
   transition: 0.3s;
 }
 .button-note:hover {
-  opacity: 0.8;
+  opacity: 0.7;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
 }
 
@@ -195,8 +202,8 @@
   margin-right: 20px;
 }
 .location h2 {
-  font-family: "Shrikhand";
-  font-weight: 100px;
+  font-family: "Roboto";
+  font-weight: 10px;
   margin: 0;
 }
 
@@ -209,7 +216,7 @@
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  background-color: #e7e4e4;
+  background-color: #f1f1f1;
 }
 .container--block .exploreRestaurant h2 {
   font-size: 20px;
@@ -351,20 +358,13 @@
   margin-bottom: -10px;
 }
 
-.loader {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: #000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1;
-  position: fixed;
-  animation: load 3.2s forwards;
-  -webkit-animation: load 3.2s forwards;
+.loader .section {
+  font-size: 40px;
+  text-align: center;
+  animation: load 3S forwards;
+  z-index: 0;
+  -webkit-animation: load 3S forwards;
 }
-
 @keyframes load {
   from {
     opacity: 1;
@@ -373,85 +373,64 @@
     opacity: 0;
   }
 }
-.lettre {
-  color: #484848;
-  font-size: 80px;
-  letter-spacing: 15px;
-  margin-bottom: 150px;
-  animation: flash 3.2s;
-  -webkit-animation: flash 3.2s;
+.loader .loader {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
 }
-
-@keyframes flash {
+.loader .loader-quart {
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+  border: 6px solid black;
+}
+.loader .loader-quart:after {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  bottom: -6px;
+  right: -6px;
+  border-radius: 50px;
+  border: 6px solid transparent;
+  border-top-color: #fff;
+  animation: spin 3s;
+  -webkit-animation: spin 3s;
+}
+@keyframes spin {
   0% {
-    color: #fff900;
-    text-shadow: 0 0 7px #fff900;
-    opacity: 1;
-  }
-  90% {
-    color: #484848;
-    text-shadow: none;
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
   }
   100% {
-    color: #fff900;
-    text-shadow: 0 0 7px #fff900;
-    opacity: 0;
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
   }
-}
-.lettre:nth-child(1) {
-  animation-delay: 0.1s;
-}
-
-.lettre:nth-child(2) {
-  animation-delay: 0.2s;
-}
-
-.lettre:nth-child(3) {
-  animation-delay: 0.3s;
-}
-
-.lettre:nth-child(4) {
-  animation-delay: 0.4s;
-}
-
-.lettre:nth-child(5) {
-  animation-delay: 0.5s;
-}
-
-.lettre:nth-child(6) {
-  animation-delay: 0.6s;
-}
-
-.lettre:nth-child(7) {
-  animation-delay: 0.7s;
-}
-
-.lettre:nth-child(8) {
-  animation-delay: 0.8s;
-}
-
-.lettre:nth-child(9) {
-  animation-delay: 0.9s;
-}
-
-.lettre:nth-child(10) {
-  animation-delay: 1s;
 }
 
 #fonctionalityPalette {
   margin-top: -20px;
-  background-color: #e7e4e4;
+  position: relative;
+  background-color: #f1f1f1;
   width: 100%;
   height: auto;
   margin-left: auto;
   margin-right: auto;
   border-radius: 30px 30px 0 0;
-}
-#fonctionalityPalette h1 {
-  font-family: "Shrikhand";
-  font-size: 20px;
-  text-align: start;
-  margin-left: 10px;
+  -webkit-border-radius: 30px 30px 0 0;
+  -moz-border-radius: 30px 30px 0 0;
+  -ms-border-radius: 30px 30px 0 0;
+  -o-border-radius: 30px 30px 0 0;
 }
 #fonctionalityPalette span {
   padding-top: 10px;
@@ -459,7 +438,6 @@
 
 .title {
   display: flex;
-  padding: 20px 10px;
   align-items: center;
   justify-content: space-between;
 }
@@ -471,24 +449,8 @@
 .entree {
   position: relative;
   cursor: pointer;
-  padding: 10px;
-}
-
-.entree::after {
-  content: "";
-  width: 0%;
-  height: 5px;
-  background-color: #99E2D0;
-  position: absolute;
-  bottom: 0%;
-  left: 50%;
-  border-radius: 10px;
-  transition: all 500ms ease;
-}
-
-.entree:hover::after {
-  left: 0%;
-  width: 100%;
+  padding: 5px;
+  border-bottom: 5px solid #99E2D0;
 }
 
 .coeur-check {
@@ -638,7 +600,7 @@
 
 .menu--block input[type=checkbox] {
   width: 90%;
-  height: 20%;
+  height: 10%;
   position: absolute;
   appearance: none;
   margin: 0px;
@@ -682,6 +644,7 @@ footer .container bg-black .block {
 footer h2 {
   text-align: start;
   color: white;
+  font-family: Shrikhand;
   font-weight: 500;
   margin-left: 10px;
   margin-bottom: 10px;
@@ -710,6 +673,69 @@ body {
   margin: 0 auto;
 }
 
+.section {
+  font-size: 40px;
+  text-align: center;
+  animation: load 3S forwards;
+  z-index: 0;
+  -webkit-animation: load 3S forwards;
+}
+
+@keyframes load {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+.loader {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+}
+
+.loader-quart {
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+  border: 6px solid black;
+}
+
+.loader-quart:after {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  bottom: -6px;
+  right: -6px;
+  border-radius: 50px;
+  border: 6px solid transparent;
+  border-top-color: #fff;
+  animation: spin 3s;
+  -webkit-animation: spin 3s;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+  }
+}
 h3 {
   text-overflow: ellipsis;
 }
