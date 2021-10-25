@@ -21,138 +21,18 @@
 //*****************MENU NAV VOIR LAYOUT/NAV*******************
 // ********container Paris belleville et icone voir LAYOUT/CONTAINER**********
 body {
-  padding: 0 auto;
-  margin: 0 auto;
+  padding: 0;
+  margin: 0;
 }
 #loader-wrapper {
   @include loadSpin;
 }
-// #loader-wrapper 
-// {
-//     position: fixed;
-//     top: 0;
-//     left: 0;
-//     width: 100%;
-//     height: 100%;
-//     z-index: 15;
-//     background-color:#f3f3f3;
-//     pointer-events: none;
-//     opacity: 1;
-//     animation: displayfade 500ms 1s forwards;
-//     -webkit-animation: displayfade 500ms 1s forwards;
-// }
 
-// @keyframes displayfade
-// {
-//     to 
-//     {
-//         opacity: 0;
-//         z-index:-1;
-//     }
-// }
-
-// #loader 
-// {
-// 	animation-delay: -0.5s; 
-	 
-//     display: block;
-//     position: relative;
-//     left: 50%;
-//     top: 50%;
-//     width:200px;
-//     height:200px;
-//     margin:-100px 0 0 -100px;
-//     border-radius: 50%;
-//     border: 3px solid transparent;
-//     border-top-color: #9356DC;
-    
-//     -webkit-animation: spinner 0.5s linear 18;
-    
-//     animation: spinner 0.5s linear 18;
-// }
- 
-// #loader:before 
-// {
-//     content: "";
-//     position: absolute;
-//     top: 5px;
-//     left: 5px;
-//     right: 5px;
-//     bottom: 5px;
-//     border-radius: 50%;
-//     border: 3px solid transparent;
-//     border-top-color: #FF79DA;
-     
-// 	-webkit-animation: spinner 1s linear 9;
-    
-// 	animation: spinner 1s linear 9;
-// }
- 
-// #loader:after 
-// {
-//     content: "";
-//     position: absolute;
-//     top: 15px;
-//     left: 15px;
-//     right: 15px;
-//     bottom: 15px;
-//     border-radius: 50%;
-//     border: 3px solid transparent;
-//     border-top-color: #99E2D0;
-    
-// 	-webkit-animation: spinner 1.5s linear 6;
-        
-// 	animation: spinner 1.5s linear 6;
-    
-// }
- 
-// @-webkit-keyframes spinner 
-// {
-//     0%   
-//     {
-//         -webkit-transform: rotate(0deg); 
-//         -ms-transform: rotate(0deg);
-//         transform: rotate(0deg);  
-//         z-index:15; 
-//     }
-    
-//     100% 
-//     {
-//         -webkit-transform: rotate(360deg);  
-//         -ms-transform: rotate(360deg);  
-//         transform: rotate(360deg);  
-//         z-index:15;       
-//     }
-// }
-
-// @keyframes spinner 
-// {
-//     0%   
-//     {
-//         -webkit-transform: rotate(0deg);  
-//         -ms-transform: rotate(0deg);  
-//         transform: rotate(0deg);  
-//         z-index:15; 
-//     }
-    
-//     100% 
-//     {
-//         -webkit-transform: rotate(360deg); 
-//         -ms-transform: rotate(360deg);  
-//         transform: rotate(360deg);  
-//         z-index:15;         
-//     }
-// }
-
-// .displayfade
-// {
-// 	animation: displayfade 1.95s;
-// 	opacity: 0;
-// 	z-index:-1;
-// 	-webkit-animation: displayfade 1.95s;
-// }
 h3 {
   text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 100%;
 }
 span {
   text-overflow: ellipsis;
@@ -209,5 +89,8 @@ span {
     margin-top: 0px;
     margin-left: auto;
     margin-right: auto;
+  }
+  footer{
+    margin-top: 50px;
   }
 }

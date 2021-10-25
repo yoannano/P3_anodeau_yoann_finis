@@ -24,83 +24,8 @@
 }
 // ********************bloc palette du gout***********************
 //***********************TOUTE LA PAGE MENU*************************
-// .loader{
-//   position: absolute;
-//   width: 100%;
-//   height: 100%;
-//   background-color: #000;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   // z-index: 1;
-//   position: fixed;
-//   animation: load 3.2s forwards;
-//   -webkit-animation: load 3.2s forwards;
-// }
-// @keyframes load {
-//   from { opacity: 1;}
 
-// to{
-//   opacity: 0;
-// }
-// }
-// .lettre {
-//   color: #484848;
-//   font-size: 80px;
-//   letter-spacing: 15px;
-//   margin-bottom: 150px;
-//   animation: flash 3.2s ;
-//   -webkit-animation: flash 3.2s ;
-// }
-// @keyframes flash {
-//   0% {
-//     color: #fff900;
-//     text-shadow: 0 0 7px #fff900;
-//     opacity: 1;
-//   }
-//   90% {
-//     color: #484848;
-//     text-shadow: none;
-//   }
-//   100% {
-//     color: #fff900;
-//     text-shadow: 0 0 7px #fff900;
-//     opacity: 0;
-//   }
-// }
-
-// .lettre:nth-child(1){
-//   animation-delay: 0.1s;
-// }
-// .lettre:nth-child(2){
-//   animation-delay: 0.2s;
-// }
-// .lettre:nth-child(3){
-//   animation-delay: 0.3s;
-// }
-// .lettre:nth-child(4){
-//   animation-delay: 0.4s;
-// }
-// .lettre:nth-child(5){
-//   animation-delay: 0.5s;
-// }
-// .lettre:nth-child(6){
-//   animation-delay: 0.6s;
-// }
-// .lettre:nth-child(7){
-//   animation-delay: 0.7s;
-// }
-// .lettre:nth-child(8){
-//   animation-delay: 0.8s;
-// }
-// .lettre:nth-child(9){
-//   animation-delay: 0.9s;
-// }
-// .lettre:nth-child(10){
-//   animation-delay: 1s;
-// }
-
-.loader{
+.loader {
   @include loadSpin;
 }
 #fonctionalityPalette {
@@ -126,21 +51,7 @@
   padding: 5px;
   border-bottom: 5px solid $color-tertiary;
 }
-// .entree::after {
-//   content: "";
-//   width: 0%;
-//   height: 5px;
-//   background-color: $color-tertiary;
-//   position: absolute;
-//   bottom: 0%;
-//   left: 50%;
-//   border-radius: 10px;
-//   // transition: all 500ms ease;
-// }
-// .entree:hover::after {
-//   left: 0%;
-//   width: 100%;
-// }
+
 .coeur-check {
   @include coeur;
 }
@@ -166,14 +77,14 @@
   animation: menus 5s ease-in-out;
   -webkit-animation: menus 5s ease-in-out;
 }
-@keyframes menus{
-  0%{
+@keyframes menus {
+  0% {
     opacity: 0;
     background-color: #f2f2f2;
-}
-100%{
-  opacity: 1;
-}
+  }
+  100% {
+    opacity: 1;
+  }
 }
 @media (hover: hover) {
   .menu--bloc:hover {
@@ -195,36 +106,30 @@
   animation: menu 1.1s;
   -webkit-animation: menu 1.1s;
 }
-@keyframes menu{
-  from{
-    transform: translateY(-200px)  ;
-    -webkit-transform: translateY(-200px)  ;
-    -moz-transform: translateY(-200px)  ;
-    -ms-transform: translateY(-200px)  ;
-    -o-transform: translateY(-200px)  ;
+@keyframes menu {
+  from {
+    transform: translateY(-200px);
+    -webkit-transform: translateY(-200px);
+    -moz-transform: translateY(-200px);
+    -ms-transform: translateY(-200px);
+    -o-transform: translateY(-200px);
     opacity: 0;
-}
-to{
-  transform: translateY(0);
-  -webkit-transform: translateY(0);
-  -moz-transform: translateY(0);
-  -ms-transform: translateY(0);
-  -o-transform: translateY(0);
-  opacity: 1;
-}
+  }
+  to {
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .menu--block .description h3 {
   margin: 0;
   margin-right: auto;
 }
-// .description h3 {
-//   color: red;
-//   background-color: aqua;
-//   overflow: hidden;
-//   text-overflow: ellipsis;
-//   white-space: nowrap;
-// }
+
 //*************************AJUSTEMENT SPAN MENU*********************
 .menu--block .description div {
   display: flex;
@@ -238,8 +143,8 @@ to{
   overflow: hidden;
   white-space: nowrap;
 }
-.menu--block .description strong{
-  margin-top: 1.1rem
+.menu--block .description strong {
+  margin-top: 1.1rem;
 }
 //**************************BLOC CROIX VERTE**************************
 .menu--block .check {
