@@ -36,7 +36,7 @@
   margin: -100px 0 0 -100px;
   border-radius: 50%;
   border: 3px solid transparent;
-  border-top-color: #9356DC;
+  border-top-color: #9356dc;
   -webkit-animation: spinner 0.5s linear 18;
   animation: spinner 0.5s linear 18;
 }
@@ -50,7 +50,7 @@
   bottom: 5px;
   border-radius: 50%;
   border: 3px solid transparent;
-  border-top-color: #FF79DA;
+  border-top-color: #ff79da;
   -webkit-animation: spinner 1s linear 9;
   animation: spinner 1s linear 9;
 }
@@ -64,7 +64,7 @@
   bottom: 15px;
   border-radius: 50%;
   border: 3px solid transparent;
-  border-top-color: #99E2D0;
+  border-top-color: #99e2d0;
   -webkit-animation: spinner 1.5s linear 6;
   animation: spinner 1.5s linear 6;
 }
@@ -288,7 +288,7 @@ h1 {
 }
 .location h2 {
   font-family: "Roboto";
-  font-weight: 600;
+  font-weight: 10px;
   margin: 0;
 }
 
@@ -577,8 +577,8 @@ h1 {
   display: flex;
   flex-direction: column;
   border-radius: 15px;
-  animation: menu 1.1s;
-  -webkit-animation: menu 1.1s;
+  animation: menu 2.1s;
+  -webkit-animation: menu 2.1s;
 }
 
 @keyframes menu {
@@ -635,6 +635,10 @@ h1 {
   font-size: 1.5rem;
   color: #fff;
   transition: transform 0.5s ease-in-out;
+  -webkit-transition: transform 0.5s ease-in-out;
+  -moz-transition: transform 0.5s ease-in-out;
+  -ms-transition: transform 0.5s ease-in-out;
+  -o-transition: transform 0.5s ease-in-out;
 }
 
 .menu--block input[type=checkbox] {

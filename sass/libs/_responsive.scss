@@ -5,9 +5,9 @@ $large: 1000px!default;
 
 //pour les petits ecran
 $medium-up: "only screen and (min-width: #{$medium})";
-// que pour les ecrans qui auront une largeur maximun superieur a medium donc petits ecran
-$medium-down: "only screen and (max-width: #{$medium})";
 
+$medium-down: "only screen and (max-width: #{$medium})";
+//pour les grands ecran
 $large-up: "only screen and (min-width: #{$large})";
 
 $large-down: "only screen and (max-width: #{$large})";
