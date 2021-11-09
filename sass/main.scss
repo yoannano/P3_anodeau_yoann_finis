@@ -11,7 +11,7 @@
 @import "./libs/responsive";
 
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Shrikhand&display=swap");
 
 // ************POUR CHANGER LE BOUTON DE L INDEX VOIR COMPONENTS/BUTTONS**************************
 // ************POUR CHANGER LE BOUTON DE LA PALETTE DE GOUT VOIR COMPONENTS/BUTTONS**************************
@@ -27,7 +27,9 @@ body {
 #loader-wrapper {
   @include loadSpin;
 }
-
+p, span{
+  font-family: Roboto;
+}
 h3 {
   text-overflow: ellipsis;
   white-space: nowrap;
