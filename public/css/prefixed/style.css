@@ -1,32 +1,6 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Shrikhand&display=swap");
-@keyframes coeur {
-  from {
-    transform: scale(0.5);
-    opacity: 0.25;
-    -webkit-transform: scale(0.5);
-    -moz-transform: scale(0.5);
-    -ms-transform: scale(0.5);
-    -o-transform: scale(0.5);
-  }
-  to {
-    transform: scale(1);
-    opacity: 1;
-    -webkit-transform: scale(1);
-    -moz-transform: scale(1);
-    -ms-transform: scale(1);
-    -o-transform: scale(1);
-  }
-}
-@-webkit-keyframes slideHeart {
-  from {
-    opacity: 0.25;
-  }
-  to {
-    opacity: 1;
-  }
-}
 @keyframes displayfade {
   to {
     opacity: 0;
@@ -505,42 +479,6 @@ h1 {
   border-bottom: 5px solid #99E2D0;
 }
 
-.coeur-check {
-  color: #9356DC;
-  margin-right: 5%;
-  position: relative;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-}
-.coeur-check input[type=checkbox] {
-  appearance: none;
-  margin: 0;
-}
-.coeur-check input[type=checkbox]:checked ~ .fas {
-  background-color: #9356DC;
-  color: #9356DC;
-  -webkit-background-clip: text;
-  font-weight: 900;
-  -webkit-animation-duration: 3.5s;
-  animation-duration: 3.5s;
-  animation-name: slideHeart;
-}
-@media (hover: hover) {
-  .coeur-check input[type=checkbox]:hover ~ .fas {
-    background: -webkit-linear-gradient(var(--color-primaire), var(--color-secondaire));
-    font-weight: 900;
-    -webkit-animation-duration: 4.5s;
-    animation-duration: 4.5s;
-    animation-name: slideHeart;
-  }
-}
-.coeur-check .fas {
-  font-size: 30px;
-  font-weight: 100;
-  color: #9356DC;
-}
-
 .menu-fad-in-top {
   border-radius: 30px 30px 0 0;
   margin-top: -20px;
@@ -728,6 +666,54 @@ body {
   margin: 0;
 }
 
+.checkbox {
+  cursor: pointer;
+}
+
+.fas {
+  font-size: 30px;
+  position: absolute;
+  opacity: 0;
+}
+
+.checkbox:hover .fas {
+  color: blueviolet;
+  transition: 2.5s ease-in-out;
+  opacity: 1;
+}
+
+.checkbox_input {
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+.checkbox_input:checked + .fas {
+  color: blueviolet;
+  opacity: 1;
+  animation: coeur 3.5s;
+  transition-duration: 5.5s ease-in-out forwards;
+  -webkit-transition-duration: 5.5s ease-in-out forwards;
+  -moz-transition-duration: 5.5s ease-in-out forwards;
+  -ms-transition-duration: 5.5s ease-in-out forwards;
+  -o-transition-duration: 5.5s ease-in-out forwards;
+  -webkit-animation: coeur 3.5s;
+}
+
+@keyframes coeur {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.far {
+  font-size: 30px;
+  color: blueviolet;
+  position: relative;
+}
+
 #loader-wrapper {
   position: fixed;
   top: 0;
@@ -742,8 +728,13 @@ body {
   -webkit-animation: displayfade 500ms 1s forwards;
 }
 
-p, span {
-  font-family: Roboto;
+.BarreRecherche {
+  font-weight: 600;
+}
+
+p,
+span {
+  font-family: "Roboto";
 }
 
 h3 {
@@ -755,42 +746,6 @@ h3 {
 
 span {
   text-overflow: ellipsis;
-}
-
-.coeur-check {
-  color: #9356DC;
-  margin-right: 5%;
-  position: relative;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-}
-.coeur-check input[type=checkbox] {
-  appearance: none;
-  margin: 0;
-}
-.coeur-check input[type=checkbox]:checked ~ .fas {
-  background-color: #9356DC;
-  color: #9356DC;
-  -webkit-background-clip: text;
-  font-weight: 900;
-  -webkit-animation-duration: 3.5s;
-  animation-duration: 3.5s;
-  animation-name: slideHeart;
-}
-@media (hover: hover) {
-  .coeur-check input[type=checkbox]:hover ~ .fas {
-    background: -webkit-linear-gradient(var(--color-primaire), var(--color-secondaire));
-    font-weight: 900;
-    -webkit-animation-duration: 4.5s;
-    animation-duration: 4.5s;
-    animation-name: slideHeart;
-  }
-}
-.coeur-check .fas {
-  font-size: 30px;
-  font-weight: 100;
-  color: #9356DC;
 }
 
 @media only screen and (min-width: 768px) {

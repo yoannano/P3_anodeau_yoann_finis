@@ -3,7 +3,6 @@
 
 @import "./components/buttons";
 
-
 @import "./layout/nav";
 @import "./layout/container";
 @import "./layout/footer";
@@ -24,11 +23,62 @@ body {
   padding: 0;
   margin: 0;
 }
+//**********************************COEUR**************************************************//
+.checkbox{
+  cursor: pointer;
+}
+.fas{
+  font-size: 30px;
+  position: absolute;
+  opacity: 0;
+}
+.checkbox:hover .fas{
+  color: blueviolet;
+  transition: 2.5s ease-in-out;
+  opacity: 1;
+
+}
+.checkbox_input{
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+.checkbox_input:checked +  .fas{
+  color: blueviolet;
+  opacity: 1;
+  animation: coeur 3.5s;
+  transition-duration: 5.5s ease-in-out forwards;
+  -webkit-transition-duration: 5.5s ease-in-out forwards;
+  -moz-transition-duration: 5.5s ease-in-out forwards;
+  -ms-transition-duration: 5.5s ease-in-out forwards;
+  -o-transition-duration: 5.5s ease-in-out forwards;
+  -webkit-animation: coeur 3.5s;
+}
+@keyframes coeur {
+  0%
+  {
+    opacity: 0;
+  }
+  100%
+  {
+    opacity: 1;
+  }
+}
+.far{
+  font-size: 30px;
+  color: blueviolet;
+  position: relative;
+}
+//**************************************************************//
 #loader-wrapper {
   @include loadSpin;
 }
-p, span{
-  font-family: Roboto;
+.BarreRecherche {
+  font-weight: 600;
+}
+p,
+span {
+  font-family: "Roboto";
 }
 h3 {
   text-overflow: ellipsis;
@@ -40,9 +90,7 @@ span {
   text-overflow: ellipsis;
 }
 // Animation coeur
-.coeur-check {
-  @include coeur;
-}
+
 @media #{$medium-up} {
   .container--block {
     margin-left: auto;
@@ -92,7 +140,7 @@ span {
     margin-left: auto;
     margin-right: auto;
   }
-  footer{
+  footer {
     margin-top: 50px;
   }
 }
