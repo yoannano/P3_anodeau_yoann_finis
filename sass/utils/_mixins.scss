@@ -47,6 +47,51 @@
     background-color: darken($color-secondary, 35);
   }
 }
+@mixin coeur {
+  cursor: pointer;
+}
+.coeur_plein {
+  font-size: 30px;
+  position: absolute;
+  opacity: 0;
+}
+.checkbox:hover .fas{
+  color: blueviolet;
+  transition: 2.5s ease-in-out;
+  opacity: 1;
+
+}
+.checkbox_input{
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+.checkbox_input:checked +  .fas{
+  color: blueviolet;
+  opacity: 1;
+  animation: coeur 3.5s;
+  transition-duration: 5.5s ease-in-out forwards;
+  -webkit-transition-duration: 5.5s ease-in-out forwards;
+  -moz-transition-duration: 5.5s ease-in-out forwards;
+  -ms-transition-duration: 5.5s ease-in-out forwards;
+  -o-transition-duration: 5.5s ease-in-out forwards;
+  -webkit-animation: coeur 3.5s;
+}
+@keyframes coeur {
+  0%
+  {
+    opacity: 0;
+  }
+  100%
+  {
+    opacity: 1;
+  }
+}
+.far{
+  font-size: 30px;
+  color: blueviolet;
+  position: relative;
+}
 @mixin container {
   width: 100%;
   margin-left: auto;

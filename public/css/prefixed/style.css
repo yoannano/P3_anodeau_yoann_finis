@@ -1,6 +1,50 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Shrikhand&display=swap");
+.coeur_plein {
+  font-size: 30px;
+  position: absolute;
+  opacity: 0;
+}
+
+.checkbox:hover .fas {
+  color: blueviolet;
+  transition: 2.5s ease-in-out;
+  opacity: 1;
+}
+
+.checkbox_input {
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+.checkbox_input:checked + .fas {
+  color: blueviolet;
+  opacity: 1;
+  animation: coeur 3.5s;
+  transition-duration: 5.5s ease-in-out forwards;
+  -webkit-transition-duration: 5.5s ease-in-out forwards;
+  -moz-transition-duration: 5.5s ease-in-out forwards;
+  -ms-transition-duration: 5.5s ease-in-out forwards;
+  -o-transition-duration: 5.5s ease-in-out forwards;
+  -webkit-animation: coeur 3.5s;
+}
+
+@keyframes coeur {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.far {
+  font-size: 30px;
+  color: blueviolet;
+  position: relative;
+}
+
 @keyframes displayfade {
   to {
     opacity: 0;
@@ -668,50 +712,6 @@ body {
 
 .checkbox {
   cursor: pointer;
-}
-
-.fas {
-  font-size: 30px;
-  position: absolute;
-  opacity: 0;
-}
-
-.checkbox:hover .fas {
-  color: blueviolet;
-  transition: 2.5s ease-in-out;
-  opacity: 1;
-}
-
-.checkbox_input {
-  width: 0;
-  height: 0;
-  opacity: 0;
-}
-
-.checkbox_input:checked + .fas {
-  color: blueviolet;
-  opacity: 1;
-  animation: coeur 3.5s;
-  transition-duration: 5.5s ease-in-out forwards;
-  -webkit-transition-duration: 5.5s ease-in-out forwards;
-  -moz-transition-duration: 5.5s ease-in-out forwards;
-  -ms-transition-duration: 5.5s ease-in-out forwards;
-  -o-transition-duration: 5.5s ease-in-out forwards;
-  -webkit-animation: coeur 3.5s;
-}
-
-@keyframes coeur {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-.far {
-  font-size: 30px;
-  color: blueviolet;
-  position: relative;
 }
 
 #loader-wrapper {
