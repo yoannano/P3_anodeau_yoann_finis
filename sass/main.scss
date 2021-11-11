@@ -22,6 +22,7 @@
 body {
   padding: 0;
   margin: 0;
+  font-family: "Roboto";
 }
 //**********************************COEUR**************************************************//
 .checkbox{
@@ -34,10 +35,7 @@ body {
 .BarreRecherche {
   font-weight: 600;
 }
-p,
-span {
-  font-family: "Roboto";
-}
+
 h3 {
   text-overflow: ellipsis;
   white-space: nowrap;
