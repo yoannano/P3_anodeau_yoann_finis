@@ -733,6 +733,10 @@ body {
   font-weight: 600;
 }
 
+h2, h3 {
+  font-family: "Shrikhand";
+}
+
 h3 {
   text-overflow: ellipsis;
   white-space: nowrap;
